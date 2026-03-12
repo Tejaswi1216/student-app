@@ -3,11 +3,11 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/Tejaswi1216/student-app.git'
-            }
-        }
+       stage('Checkout') {
+    steps {
+        git branch: 'main', url: 'https://github.com/Tejaswi1216/student-app.git'
+    }
+}
 
         stage('Build Docker Image') {
             steps {
